@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <style>
+    /* CSS solo para la sección contacto */
+    body {
+      background: linear-gradient(135deg, #141E30, #243B55);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* formulario arriba */
+      min-height: 100vh;
+      padding-top: 50px; /* espacio desde el top */
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contacto {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+      width: 350px;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      letter-spacing: 1px;
+    }
+
+    .contacto label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .contacto input,
+    .contacto textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      resize: vertical;
+    }
+
+    .contacto input::placeholder,
+    .contacto textarea::placeholder {
+      color: #ddd;
+    }
+
+    .contacto button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #00c3ff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contacto button:hover {
+      background: #02a3d6;
+      transform: translateY(-2px);
+    }
+
+    /* Comentario / descargo */
+    .contacto .descargo {
+      font-size: 0.8em;
+      color: #ccc;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contacto">
+    <h2>Contacto</h2>
+    <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="Tu email..." required>
+
+      <label for="comentario">Comentario</label>
+      <textarea id="comentario" name="comentario" rows="4" placeholder="Deja tu comentario aquí..."></textarea>
+
+      <!-- Comentario / descargo -->
+      <p class="descargo">
+        Tu información solo se usará para contactarte y no será compartida con terceros.
+      </p>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</body>
+</html>

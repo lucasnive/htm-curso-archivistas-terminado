@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHIVISTAS</title>
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="/bandas/logo.jpg" alt="Logo">
+    </div>
+    <nav class="menu">
+      <a href="PARTITURAS.html" target="_blank">Partituras</a>
+      <a href="Bdas.html" target="_blank">Bandas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+ 
+  <main>
+  
+    <div class="fondo-carrusel">
+      <img src="bandas/GRANADEROS A CABALLOS.jpg" class="active" alt="Fondo 1">
+      <img src="bandas/PATRICIO.jpg" alt="Fondo 2">
+      <img src="bandas/RA1.jpg" alt="Fondo 3">
+      <img src="bandas/B ING MTE 12.jpg" alt="Fondo 4">
+    </div>
+
+  </main>
+
+ 
+  <script src="index.js"></script>
+  <script>
+    
+    const fondos = document.querySelectorAll('.fondo-carrusel img');
+    let index = 0;
+    setInterval(() => {
+      fondos[index].classList.remove('active');
+      index = (index + 1) % fondos.length;
+      fondos[index].classList.add('active');
+    }, 6000);
+  </script>
+ <footer>
+    © 2025 Archivistas - Todos los derechos reservados
+  </footer>
+</body>
+</html>
